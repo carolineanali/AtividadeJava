@@ -13,7 +13,7 @@ public class AtividadeFor {
         float mediaMasculino = 0;
         float media = 0;
 
-        for(int cont = 0; cont < 10; cont++){
+        for(int cont = 0; cont <10; cont++){
             System.out.println("Por favor, digite o sexo: (M para masculino e F para feminino)");
             sexo = scanner.next();
             System.out.println("Por favor, digite a altura: (Exemplo: 1,55) ");
@@ -30,18 +30,17 @@ public class AtividadeFor {
             
             
         // A maior e a menor altura do grupo
-        if(cont == 0){
-            maiorAltura = altura;
-            menorAltura = altura;
-        } else {
-            if (altura > maiorAltura){
+            if(cont == 0){
                 maiorAltura = altura;
-            } else if (altura < menorAltura) {
                 menorAltura = altura;
-            }
+            } else {
+                if (altura > maiorAltura){
+                    maiorAltura = altura;
+                } else if (altura < menorAltura) {
+                    menorAltura = altura;
+             }
+          }
         }
-
-    }
 
         media = mediaMasculino / contadorQtdHomem;
 
