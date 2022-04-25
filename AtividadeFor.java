@@ -4,7 +4,7 @@ public class AtividadeFor {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        int sexo;
+        String sexo;
         float altura;
         float maiorAltura = 0;
         float menorAltura = 0;
@@ -13,17 +13,17 @@ public class AtividadeFor {
         float mediaMasculino = 0;
         float media = 0;
 
-        for(int cont = 0; cont < 3; cont++){
-            System.out.println("Por favor, digite o sexo: (0 para masculino e 1 para feminino)");
-            sexo = scanner.nextInt();
+        for(int cont = 0; cont < 10; cont++){
+            System.out.println("Por favor, digite o sexo: (M para masculino e F para feminino)");
+            sexo = scanner.next();
             System.out.println("Por favor, digite a altura: (Exemplo: 1,55) ");
             altura = scanner.nextFloat();
 
             //Quantidade de mulheres
-            if(sexo == 1 ){
+            if(sexo.equals("F") ){
                 contadorQtdMulher = contadorQtdMulher + 1;
     // Média da altura dos homens
-            } else if (sexo == 0) {
+            } else if (sexo.equals("M")) {
                 mediaMasculino = mediaMasculino + altura;
                 contadorQtdHomem = contadorQtdHomem + 1;
             }
